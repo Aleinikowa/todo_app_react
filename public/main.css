@@ -1,0 +1,198 @@
+@-webkit-keyframes MyAnimation {
+	from { background-color: #f2f5fb }
+  to { background-color: #f8ca5f }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/bg_1.jpg) center top;
+  display: flex;
+  align-items: center;
+}
+
+#app-container {
+  width: 90%;
+  height: 90%;
+  margin: 20px auto;
+  background: url(../images/bg_2.jpg) 90% top;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(85, 85, 85, 0.7);
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.edit-form-container {
+  padding: 35px 100px 0;
+}
+
+.todo-list-container {
+  padding: 0 100px 35px;
+}
+.editor-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-form #todo-text {
+  padding: 7px;
+  border-radius: 7px;
+  border: 1px solid rgb(168, 168, 168);
+  box-shadow: 0 0 10px rgba(160, 160, 160, 0.3);
+}
+
+.form-row-left {
+  margin-bottom: 10px;
+}
+
+.form-row-right {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.form-row-right input {
+  padding: 7px 35px;
+  background-color: #f2f5fb;
+  border: 1px solid rgb(151, 151, 151);
+  font-weight: 700;
+  border-radius: 7px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.form-row-right input:nth-child(1) {
+  animation: MyAnimation 1s infinite;
+	animation-direction: alternate;
+}
+
+.form-row-right input:nth-child(1):hover {
+  animation-play-state: paused;
+  background-color: #f8ca5f;
+}
+
+.form-row-right input:nth-child(2):hover {
+  background-color: #d61515;
+  color: #f2f5fb;
+} 
+
+.form-row-right input:focus {
+  outline: none;
+}
+
+#todo-text {
+  width: 100%;
+}
+
+.item {
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 7px;
+  box-shadow: 0 0 7px rgba(73, 73, 73, 0.3);
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 15px 0;
+}
+
+.item h3, .item .control-block {
+  padding: 5px 40px;
+}
+
+.item .info-block {
+  padding: 5px 50px 0 40px;
+}
+
+.item > h3 {
+  color: #3a3f47;
+  font-weight: 800;
+}
+
+.info-block {
+  display: flex;
+}
+
+.info-block .created-date-panel span, .info-block .done-date-panel span {
+  color: #1940a7;
+  font-weight: 700;
+}
+
+.status-panel {
+  flex-grow: 4;
+}
+
+.created-date-panel {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.done-date-panel {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.control-block {
+  text-align: right;
+}
+
+.control-block button {
+  padding: 5px 10px;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 7px;
+  box-shadow: 0 0 5px rgba(73, 73, 73, 0.1);
+  background-color: #f2f5fb;
+  font-weight: 600;
+  margin: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.control-block button:hover {
+  background-color: #f8ca5f;
+}
+
+.control-block button:last-child:hover {
+  background-color: #d61515;
+  color: #f2f5fb;
+}
+
+
+.control-block button:focus {
+  outline: none;
+}
+
+.view-button {
+  width: 125px;
+  color: #8b25ad;
+}
+
+.postpone-button {
+  width: 125px;
+  color: #1940a7;
+}
+
+.resume-button {
+  width: 125px;
+  color: #3a3f47;
+}
+
+.delete-button {
+  width: 125px;
+  color: #d61515;
+}
+
+.done-button {
+  width: 125px;
+  color: #009447;
+}
